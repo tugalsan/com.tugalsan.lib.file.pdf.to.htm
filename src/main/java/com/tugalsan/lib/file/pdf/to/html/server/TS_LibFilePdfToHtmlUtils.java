@@ -33,7 +33,7 @@ public class TS_LibFilePdfToHtmlUtils {
 
     public static Path pathOutput(Path rawPdf) {
         var label = TS_FileUtils.getNameLabel(rawPdf);
-        return rawPdf.resolveSibling(label + ".html");
+        return rawPdf.resolveSibling(label + ".htm");//spi.file needs htm!
     }
 
     public static Path pathConfig(Path file) {
