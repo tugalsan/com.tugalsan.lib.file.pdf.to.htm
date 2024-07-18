@@ -46,6 +46,7 @@ public class TS_LibFilePdfFromToUtils {
         return props;
     }
     public static String CONFIG_PARAM_PATH_INPUT = "pathInput";
+    public static String EXECUTE_PARAM_LOAD_CONFIG_FILE = "--load-properties-file";
 
     public static TGS_UnionExcuse<Path> execute(Path driver, Path pathInput) {
         return TGS_UnSafe.call(() -> {
@@ -92,7 +93,7 @@ public class TS_LibFilePdfFromToUtils {
             args.add("\"" + TS_OsJavaUtils.getPathJava().resolveSibling("java.exe") + "\"");
             args.add("-jar");
             args.add("\"" + driver.toAbsolutePath().toString() + "\"");
-            args.add("--load-properties-file");
+            args.add(EXECUTE_PARAM_LOAD_CONFIG_FILE);
             args.add("\"" + pathConfig.toAbsolutePath().toString() + "\"");
             d.cr("_execute", "args", args);
             var cmd = args.stream().collect(Collectors.joining(" "));
