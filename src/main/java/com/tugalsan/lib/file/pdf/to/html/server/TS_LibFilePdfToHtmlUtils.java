@@ -26,6 +26,7 @@ public class TS_LibFilePdfToHtmlUtils {
                 .map(p -> p.resolve("bin"))
                 .map(p -> p.resolve(driverPackageName))
                 .map(p -> p.resolve("home"))
+                .map(p -> p.resolve("target"))
                 .map(p -> p.resolve(driverPackageName + "-1.0-SNAPSHOT-jar-with-dependencies.jar"))
                 .filter(p -> TS_FileUtils.isExistFile(p))
                 .findAny().orElse(null);
