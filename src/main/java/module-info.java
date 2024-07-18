@@ -5,4 +5,5 @@ module com.tugalsan.lib.file.pdf.to.html {requires com.tugalsan.api.os;
     requires com.tugalsan.api.union;
     requires com.tugalsan.api.function;
     requires com.tugalsan.api.log;
+    exports com.tugalsan.lib.file.pdf.to.html.server;
 }
