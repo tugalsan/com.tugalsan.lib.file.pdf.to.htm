@@ -15,12 +15,12 @@ import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
-public class TS_LibFilePdfFromToUtils {
+public class TS_LibFilePdfToHtmlUtils {
 
-    final private static TS_Log d = TS_Log.of(true, TS_LibFilePdfFromToUtils.class);
+    final private static TS_Log d = TS_Log.of(true, TS_LibFilePdfToHtmlUtils.class);
 
     public static Path pathDriver() {
-        var driverPackageName = TS_LibFilePdfFromToUtils.class.getPackageName().replace(".lib.", ".dsk.");
+        var driverPackageName = TS_LibFilePdfToHtmlUtils.class.getPackageName().replace(".lib.", ".dsk.");
         return List.of(File.listRoots()).stream()
                 .map(p -> Path.of(p.toString()))
                 .map(p -> p.resolve("bin"))
