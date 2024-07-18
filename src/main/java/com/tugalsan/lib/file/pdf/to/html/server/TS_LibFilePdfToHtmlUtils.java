@@ -20,7 +20,7 @@ public class TS_LibFilePdfToHtmlUtils {
     final private static TS_Log d = TS_Log.of(true, TS_LibFilePdfToHtmlUtils.class);
 
     public static Path pathDriver() {
-        var driverPackageName = TS_LibFilePdfFromHtmlUtils.class.getPackageName().replace(".server", "").replace(".lib.", ".dsk.");
+        var driverPackageName = TS_LibFilePdfToHtmlUtils.class.getPackageName().replace(".server", "").replace(".lib.", ".dsk.");
         return List.of(File.listRoots()).stream()
                 .map(p -> Path.of(p.toString()))
                 .map(p -> p.resolve("bin"))
