@@ -20,12 +20,13 @@ public class TS_LibFilePdfFromToUtils {
     final private static TS_Log d = TS_Log.of(true, TS_LibFilePdfFromToUtils.class);
 
     public static Path pathDriver() {
+        var driverPackageName = TS_LibFilePdfFromToUtils.class.getPackageName().replace(".lib.", ".dsk.");
         return List.of(File.listRoots()).stream()
                 .map(p -> Path.of(p.toString()))
                 .map(p -> p.resolve("bin"))
-                .map(p -> p.resolve(TS_LibFilePdfFromToUtils.class.getPackageName()))
+                .map(p -> p.resolve(driverPackageName))
                 .map(p -> p.resolve("home"))
-                .map(p -> p.resolve(TS_LibFilePdfFromToUtils.class.getPackageName() + "-1.0-SNAPSHOT-jar-with-dependencies.jar"))
+                .map(p -> p.resolve(driverPackageName + "-1.0-SNAPSHOT-jar-with-dependencies.jar"))
                 .filter(p -> TS_FileUtils.isExistFile(p))
                 .findAny().orElse(null);
     }
