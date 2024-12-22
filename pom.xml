@@ -65,12 +65,11 @@
                 <version>3.13.0</version>
                 <configuration>
                     <release>23</release>
-                    <!--  <enablePreview>true</enablePreview>
-                    <compilerArgs>
-                       <arg>- -add-modules</arg>
+                    <enablePreview>true</enablePreview>
+                    <!--<compilerArgs>
+                        <arg>- -add-modules</arg>
                         <arg>jdk.incubator.vector</arg>
-                        <arg>-XX:+EnableDynamicAgentLoading 
-                    </compilerArgs> -->
+                    </compilerArgs>-->
                 </configuration>
             </plugin>
         </plugins>
