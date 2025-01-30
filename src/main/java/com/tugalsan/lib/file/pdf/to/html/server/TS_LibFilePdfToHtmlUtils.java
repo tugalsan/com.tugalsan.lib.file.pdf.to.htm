@@ -89,7 +89,7 @@ public class TS_LibFilePdfToHtmlUtils {
             if (TS_FileUtils.isExistFile(pathOutput)) {
                 return TGS_UnionExcuse.ofExcuse(d.className, "_execute", "pathOutput cleanup error-" + pathOutput);
             }
-            //SIGN
+            //EXECUTE
             List<String> args = new ArrayList();
             args.add("\"" + TS_OsJavaUtils.getPathJava().resolveSibling("java.exe") + "\"");
             args.add("-jar");
