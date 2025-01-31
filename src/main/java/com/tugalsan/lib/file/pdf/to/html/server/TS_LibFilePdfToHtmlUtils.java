@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
+@Deprecated //JUST USE com.tugalsan.api.file.pdf.pdfbox3.server.TS_FilePdfBox3UtilsHtml.toHtml(Path srcPDF, Path dstHTM);
 public class TS_LibFilePdfToHtmlUtils {
 
     final private static TS_Log d = TS_Log.of(true, TS_LibFilePdfToHtmlUtils.class);
